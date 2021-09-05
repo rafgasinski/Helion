@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="childCategory"
+            type="com.example.helion.data.base.ChildCategory" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        style="@style/CardView.Style"
+        android:layout_width="@dimen/card_item_width"
+        android:layout_height="@dimen/card_item_height"
+        android:backgroundTint="?attr/colorThemeBackground">
+
+        <TextView
+            android:id="@+id/child_category_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@{childCategory.name}"
+            android:textColor="?attr/colorControlNormal"
+            android:maxLines="2"
+            android:ellipsize="end"
+            tools:text="Electrical Installations" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

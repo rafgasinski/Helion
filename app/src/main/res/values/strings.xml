@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Helion</string>
+    <string name="empty_categories_list">No categories here yet</string>
+    <string name="error_failed_to_load_category_list">Error: Failed to load category list</string>
+    <string name="viewing_cached_data">Viewing cached data</string>
+    <string name="id_value">Id: %d</string>
+    <string name="book_count_value">Books: %s</string>
+    <string name="close">Close</string>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="category"
+            type="com.example.helion.data.base.Category" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/CardView.Style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="?attr/colorThemeForeground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/category_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:drawablePadding="10dp"
+                android:text="@{category.name}"
+                android:textColor="?attr/colorControlNormal"
+                android:textSize="16sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                app:drawableEndCompat="@drawable/ic_outline_bookmarks"
+                tools:text="Technique and mechanics" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/child_categories_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:goneIfListNullOrEmpty="@{category.children}"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_child_category" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>
